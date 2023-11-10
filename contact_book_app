@@ -1,10 +1,10 @@
 Contact = {}
 
 def showFunction():
-    print (Contact.items())
+    print (Contact.items())  # dict_items etai print hocche
     print ("name \t contact" )
     for key in Contact:
-        print("{} \t {}".format(key,Contact.get(key)))
+        print("{} \t  {}".format(key,Contact.get(key)))
 
 while True:
     choice = int( input("1. Add New Contact \n"
@@ -52,12 +52,11 @@ while True:
         if del_Contact in Contact :
             DeleteConfirmed = input ("Do you want to delete this contact y/n :")
             if DeleteConfirmed == "y" or DeleteConfirmed == "Y":
+                Contact.pop(del_Contact)
                 showFunction() 
                 print(" Contact Delete Successfully ")
             else:
                 print ("The name is not Found in the contact ")
 
     else:
-        print ("Game Over, Thanks")           
-
-        break 
+        break            
